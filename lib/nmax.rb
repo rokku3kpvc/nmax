@@ -1,6 +1,12 @@
 require "nmax/version"
+require "nmax/exceptions"
+require "nmax/counter"
 
+# Base module that runs the script
 module Nmax
-  class Error < StandardError; end
-  # Your code goes here...
+  module_function
+
+  def call(n_arg)
+    Counter.new(n_arg).run
+  end
 end
