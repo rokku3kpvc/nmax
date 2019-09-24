@@ -1,38 +1,53 @@
 # Nmax
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nmax`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem checks text from file or STDIN and returns provided N maximum integers.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+* Clone this repo
 
-```ruby
-gem 'nmax'
+* Move to gem folder
+
+```bash
+cd nmax
 ```
 
-And then execute:
+* Build gem with  bundler
 
-    $ bundle
+```bash
+gem build nmax.gemspec
+```
 
-Or install it yourself as:
+* Install gem
 
-    $ gem install nmax
+```bash
+gem install nmax-0.1.0.gem
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+For CLI
 
-## Development
+```bash
+cat some-file.txt | nmax 5
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+echo "s2mapl3 t3xt" | nmax 2
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+For Ruby
+
+```ruby
+require "nmax"
+Nmax.call(2)
+%(provide sample t3xt
+fr0m STD1N
+and hit Ctrl + D for f1n1sh)
+# => [3, 1]
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nmax.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rokku3kpvc/nmax.
 
 ## License
 
